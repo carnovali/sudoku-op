@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 410px;
+  height: 93%;
+  margin: 0rem 0 1rem;
+}
+
+.sudoku-board-container {
+  width: 100%;
+  padding: 0.8rem 0.1rem;
+  background-color: var(--bg-dark);
+}
+
+.game-info-container {
+  width: 95%;
+}
+
+.panel-container {
+  width: 90%;
+  margin: 0.7rem 0 0;
+}
+
+.players-container {
+  width: 90%;
+}

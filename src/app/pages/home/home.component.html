@@ -1,0 +1,54 @@
+<div class="main mat-app-background">
+  <p *ngIf="invalidID">La ID de juego ingresada no es valida</p>
+  <form class="container" [formGroup]="formHome">
+    <h2>Nombre de usuario</h2>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de usuario</mat-label>
+      <input formControlName="username" id="username" matInput type="text" />
+      <mat-error *ngIf="formHome.controls['username'].errors?.['required']">
+        El campo <strong>es requerido</strong>
+      </mat-error>
+    </mat-form-field>
+    <hr />
+
+    <h2>Unirse a una partida</h2>
+    <mat-form-field appearance="fill">
+      <input
+        formControlName="gameID"
+        matInput
+        type="text"
+        placeholder="ID de partida"
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="onClickJoin()"
+      [disabled]="!formHome.valid"
+    >
+      Unirse
+    </button>
+
+    <hr />
+
+    <h2>Crear una nueva partida</h2>
+    <mat-form-field appearance="fill">
+      <mat-label for="difficulty">Dificultad:</mat-label>
+      <mat-select matInput formControlName="difficulty" id="dificulty">
+        <mat-option value="easy">Fácil</mat-option>
+        <mat-option value="medium">Medio</mat-option>
+        <mat-option value="hard">Difícil</mat-option>
+        <mat-option value="expert">Experto</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onClickCreate()"
+      [disabled]="!formHome.valid"
+    >
+      Crear
+    </button>
+  </form>
+</div>

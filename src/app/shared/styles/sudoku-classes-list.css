@@ -1,0 +1,151 @@
+/* Players classes */
+
+/* Cell color */
+.player-bg {
+  width: 85%;
+  aspect-ratio: 1;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Players colors */
+
+.player-blue {
+  background-color: var(--player-blue);
+  color: var(--white);
+}
+
+.player-orange {
+  background-color: var(--player-orange);
+  color: var(--white);
+}
+
+.player-red {
+  background-color: var(--player-red);
+  color: var(--white);
+}
+
+.player-cyan {
+  background-color: var(--player-cyan);
+  color: var(--grey-dark);
+}
+
+.player-violet {
+  background-color: var(--player-violet);
+  color: var(--white);
+}
+
+.player-light-blue {
+  background-color: var(--player-light-blue);
+  color: var(--grey-dark);
+}
+
+.player-yellow {
+  background-color: var(--player-yellow);
+  color: var(--grey-dark);
+}
+
+.player-skin {
+  background-color: var(--player-skin);
+  color: var(--white);
+}
+
+.player-green {
+  background-color: var(--player-green);
+  color: var(--grey-dark);
+}
+
+.player-fuchsia {
+  background-color: var(--player-fuchsia);
+  color: var(--white);
+}
+
+.player-brown {
+  background-color: var(--player-brown);
+  color: var(--white);
+}
+
+.player-pink {
+  background-color: var(--player-pink);
+  color: var(--grey-dark);
+}
+
+.player-dark-green {
+  background-color: var(--player-dark-green);
+  color: var(--white);
+}
+
+.player-marine-blue {
+  background-color: var(--player-marine-blue);
+  color: var(--white);
+}
+
+.player-dark {
+  background-color: var(--bg-dark);
+}
+
+/* Cell borders */
+.border-bottom {
+  border-bottom: 3px solid var(--pink-main);
+}
+
+.border-right {
+  border-right: 3px solid var(--pink-main);
+}
+
+.border-top-none {
+  border-top: none;
+}
+
+.border-bottom-none {
+  border-bottom: none;
+}
+
+.border-left-none {
+  border-left: none;
+}
+
+.border-right-none {
+  border-right: none;
+}
+
+/* Candidates grid area */
+.n1 {
+  grid-area: n1;
+}
+
+.n2 {
+  grid-area: n2;
+}
+
+.n3 {
+  grid-area: n3;
+}
+
+.n4 {
+  grid-area: n4;
+}
+
+.n5 {
+  grid-area: n5;
+}
+
+.n6 {
+  grid-area: n6;
+}
+
+.n7 {
+  grid-area: n7;
+}
+
+.n8 {
+  grid-area: n8;
+}
+
+.n9 {
+  grid-area: n9;
+}
+
+/* Circle in Name Color */

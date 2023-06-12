@@ -1,0 +1,81 @@
+.mat-button-toggle-label-content {
+  line-height: 32px !important;
+  border: 1px solid red;
+}
+
+.mat-button-toggle-group {
+  height: 32px;
+  align-items: center;
+}
+
+.panel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer p {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+
+.numbers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  margin: 0.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--grey);
+  color: var(--white);
+  font-size: 1.7rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.delete-icon {
+  transform: scale(1.3);
+}
+
+.selected-number {
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-buttons button {
+  font-size: 1.2rem;
+  padding: 1.2rem 0.8rem;
+}
+
+.sep {
+  width: 100%;
+  background-color: var(--grey-bright);
+  margin: 0.5rem 0;
+}
+
+.sep-lg {
+  height: 2px;
+}
+
+.sep-sm {
+  height: 1px;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  color: var(--white) !important;
+}
+
+.mat-mdc-raised-button.mat-accent {
+  --mdc-protected-button-container-color: #607d8b;
+}

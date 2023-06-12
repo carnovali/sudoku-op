@@ -1,0 +1,14 @@
+<div *ngIf="data.isWinner">
+  <h1 mat-dialog-title>Ganaste!</h1>
+  <div mat-dialog-content>
+    <ul>
+      <li>Dificultad: {{ getTranslatedDifficulty(data.difficulty) }}</li>
+      <li>Tiempo: {{ data.timer | timer }}</li>
+      <li>Jugadores: {{ data.playersAmount }}</li>
+    </ul>
+  </div>
+</div>
+<div *ngIf="!data.isWinner">
+  <h1 mat-dialog-title>No Ganaste!</h1>
+  <div mat-dialog-content>Todavia...</div>
+</div>

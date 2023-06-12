@@ -1,0 +1,31 @@
+<div class="sudoku-board">
+  <ng-container *ngFor="let row of sudokuPuzzleArray; let iR = index">
+    <ng-container *ngFor="let cell of row; let iC = index">
+      <div
+        class="sudoku-cell"
+        (click)="onClickBoard(iR, iC)"
+        [ngClass]="getCellClasses(originalSudokuPuzzleArray, iR, iC)"
+        [ngStyle]="getInsideBorders(playerID, iR, iC)"
+      >
+        <div
+          *ngIf="(cell[0] | typeofCheck) === 'number' || cell[0] === null"
+          [ngClass]="getColorClasses(cell[1])"
+          [ngStyle]="getbaseUsedCellClass(cell[1])"
+        >
+          <p>
+            {{ cell[0] === null ? "" : cell[0] }}
+          </p>
+        </div>
+        <div class="candidates" *ngIf="(cell[0] | typeofCheck) === 'string'">
+          <ng-container
+            *ngFor="let candidate of parseCandidatesString(cell[0])"
+          >
+            <p [ngClass]="getCellCandidatesPositionClasses(candidate)">
+              {{ candidate }}
+            </p>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

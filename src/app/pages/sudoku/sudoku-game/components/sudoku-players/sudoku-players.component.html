@@ -1,0 +1,9 @@
+<p>Jugadores: {{ playerList?.length }}</p>
+<div class="players">
+  <div class="player" *ngFor="let player of playerList">
+    <div class="player-circle-container">
+      <div class="player-bg" [ngClass]="getColorClasses(player[1])"></div>
+    </div>
+    <p>{{ player[0] }}</p>
+  </div>
+</div>

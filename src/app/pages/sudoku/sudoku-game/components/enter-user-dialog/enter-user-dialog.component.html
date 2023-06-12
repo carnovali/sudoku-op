@@ -1,0 +1,22 @@
+<form>
+  <h1 mat-dialog-title>Introduce un nombre de usuario</h1>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre de usuario</mat-label>
+      <input type="text" [formControl]="userNameFormControl" matInput />
+      <mat-error *ngIf="userNameFormControl.hasError('required')">
+        El campo <strong>es requerido</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-button
+      [mat-dialog-close]="userNameFormControl.value"
+      [disabled]="!userNameFormControl.valid"
+      cdkFocusInitial
+    >
+      Listo
+    </button>
+  </div>
+</form>

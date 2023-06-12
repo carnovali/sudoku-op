@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="game-info-container">
+    <app-game-info
+      [gameID]="gameID"
+      [difficulty]="sudokuGame.difficulty"
+    ></app-game-info>
+  </div>
+  <div class="sudoku-board-container">
+    <app-sudoku-board
+      (boardChange)="onClickBoard($event)"
+      [sudokuPuzzleArray]="sudokuGame.sudokuPuzzleArray"
+      [originalSudokuPuzzleArray]="sudokuGame.originalSudokuPuzzleArray"
+      [playerID]="playerID"
+    ></app-sudoku-board>
+  </div>
+  <div class="panel-container">
+    <app-sudoku-panel
+      (onClickChangeSelectedNumber)="changeSelectedNumber($event)"
+      (onClickToggleCandidateMode)="toggleCandidateMode($event)"
+      (onClickUndoChanges)="undo()"
+      (onClickCheckForWin)="checkForWin()"
+      [timer]="timer"
+      [selectedNumber]="selectedNumber"
+      [playerID]="playerID"
+    ></app-sudoku-panel>
+  </div>
+  <div class="players-container">
+    <app-sudoku-players [playerList]="sudokuGame.players"></app-sudoku-players>
+  </div>
+</div>

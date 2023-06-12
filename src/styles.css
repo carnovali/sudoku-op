@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inder, "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+app-root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+:root {
+  font-size: 14px;
+  --pink-main: #e91e63;
+  --accent: #607d8b;
+  --title-dark: #480e0e99;
+  --title-middle: #f5f5f5bf;
+  --title-bright: #f5f5f5e6;
+  --title-dark-contrast: #480e0e99;
+  --title-middle-contrast: #b8616199;
+  --title-bright-contrast: #993d3d99;
+  --white: #fafafa;
+  --bg-dark: #212121;
+  --bg-bright: #303030;
+  --grey-dark: #3c3c3c;
+  --grey: #424242;
+  --grey-bright: #595959;
+  --grey-white: #999999;
+
+  --player-blue: #2f8aff;
+  --player-orange: #ee6002;
+  --player-red: #cf2d30;
+  --player-cyan: #02ff9a;
+  --player-violet: #a900ac;
+  --player-light-blue: #22d7ff;
+  --player-yellow: #ffc042;
+  --player-skin: #ff8282;
+  --player-green: #88d356;
+  --player-fuchsia: #e91e63;
+  --player-brown: #b66d00;
+  --player-pink: #ffb2f7;
+  --player-dark-green: #8aa164;
+  --player-marine-blue: #7860bf;
+}
+
+@media screen and (min-width: 375px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* @media screen and (min-width: 425px) {
+  :root {
+    font-size: 18px;
+  }
+}
+ */

@@ -1,0 +1,14 @@
+<div class="show-gameinfo">
+  <p id="difficulty">{{ getTranslatedDifficulty(difficulty) }}</p>
+  <div>
+    <p id="game-id">{{ gameID }}</p>
+    <mat-icon
+      (click)="onClickCopy()"
+      matTooltip="Copiar ID"
+      aria-hidden="false"
+      aria-label="copy game ID"
+      color="accent"
+      fontIcon="content_copy"
+    ></mat-icon>
+  </div>
+</div>

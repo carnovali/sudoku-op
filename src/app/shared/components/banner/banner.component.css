@@ -1,0 +1,37 @@
+.container {
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: Inder, "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--title-middle);
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+#ku {
+  color: var(--title-bright);
+}
+
+#-op {
+  color: var(--title-dark);
+}
+
+.contrast-color #ku {
+  color: var(--title-bright-contrast);
+}
+
+.contrast-color #-op {
+  color: var(--title-dark-contrast);
+}
+
+.contrast-color h2 {
+  color: var(--title-middle-contrast);
+}

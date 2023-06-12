@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="panel-top">
+    <mat-button-toggle-group
+      #candidateModeButtonsCollection="matButtonToggleGroup"
+      (click)="
+        onClickToggleCandidateMode.emit(candidateModeButtonsCollection.value)
+      "
+      name="candidateMode"
+      aria-label="Candidate Mode"
+      value="0"
+    >
+      <mat-button-toggle value="1">candidato</mat-button-toggle>
+      <mat-button-toggle value="0">normal</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="timer">
+      <p>{{ timer | timer }}</p>
+    </div>
+  </div>
+  <div class="sep-lg sep"></div>
+  <div class="panel-bottom">
+    <div class="numbers">
+      <button
+        *ngFor="let number of numbers"
+        class="number"
+        [ngClass]="getPlayerColor(number)"
+        [ngStyle]="getSelectedCellEffect(number)"
+        (click)="onClickChangeSelectedNumber.emit(number)"
+      >
+        <ng-container *ngIf="number === null">
+          <mat-icon
+            class="delete-icon"
+            aria-hidden="false"
+            aria-label="delete cell"
+            fontIcon="close"
+          ></mat-icon
+        ></ng-container>
+        <ng-container *ngIf="number !== null">{{ number }}</ng-container>
+      </button>
+    </div>
+    <div class="sep-sm sep"></div>
+    <div class="control-buttons">
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="onClickCheckForWin.emit()"
+      >
+        Validar <mat-icon fontIcon="done"></mat-icon>
+      </button>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="onClickUndoChanges.emit()"
+      >
+        Deshacer <mat-icon fontIcon="undo"></mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="sep-lg sep"></div>
+</div>

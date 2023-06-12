@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.main {
+  height: 100%;
+}
+
+app-banner {
+  width: 100%;
+}
+
+.router-outlet {
+  width: 40%;
+}
+
+.container {
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 93vh;
+}
+
+@media screen and (max-width: 1900px) {
+  .router-outlet {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .router-outlet {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .router-outlet {
+    width: 100%;
+  }
+}
