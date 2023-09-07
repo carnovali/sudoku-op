@@ -29,4 +29,4 @@ Juega en linea con amigos para completar el sudoku en la menor cantidad de tiemp
 
 ## Demo
 
-https://https://sudoku-op.web.app/
+https://sudoku-op.web.app/
